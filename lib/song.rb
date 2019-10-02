@@ -28,6 +28,7 @@ class Song
         genres_hash[genre_type] = 1
       end 
     end 
+    return genres_hash
     #binding.pry
   end 
   
