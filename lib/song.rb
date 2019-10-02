@@ -20,6 +20,14 @@ class Song
   end 
   
   def self.genres 
+
+  end 
+  
+  def self.artists
+    
+  end 
+  
+  def self.genre_count
     genres_hash = {}
     @@genres.each do |genre_type|
       if genres_hash[genre_type]
@@ -30,13 +38,5 @@ class Song
     end 
     return genres_hash
     #binding.pry
-  end 
-  
-  def self.artists
-    
-  end 
-  
-  def self.genre_count
-    
   end 
 end 
