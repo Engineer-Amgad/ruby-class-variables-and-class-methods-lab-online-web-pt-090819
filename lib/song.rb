@@ -24,7 +24,15 @@ class Song
   end 
   
   def self.artists
-    
+    artists_hash = {}
+    @@artists.each do |artists_name|
+      if artists_hash[artists_name]
+        artists_hash[artists_name] += 1 
+      else
+        artists_hash[artists_name] = 1 
+      end 
+    end 
+    return artists_hash
   end 
   
   def self.genre_count
@@ -37,6 +45,9 @@ class Song
       end 
     end 
     return genres_hash
-    #binding.pry
+  end 
+  
+  def self.artist_count
+    
   end 
 end 
